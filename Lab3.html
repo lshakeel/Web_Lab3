@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+#anim{
+    width:auto;
+    height:400px;
+    background:url("bg.png") repeat-y;
+    animation: example 10s linear infinite;
+    -webkit-animation: example 10s linear infinite; /** Chrome & Safari **/
+    -moz-animation: example 10s linear infinite; /** Firefox **/
+    -o-animation: example 10s linear infinite; /** Opera **/
+}
+
+#plane{
+   position:relative;
+   top:30%;
+   left:50%;
+}
+
+#move div{}
+#move div:target {
+    transform: translateY(-100px); /* Standard syntax */
+		}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes example {
+    from {background-position: 0,0;}
+    to {background-position: -600px,0;}
+}
+/* Standard syntax */
+@keyframes example {
+    from {background-position: 0,0;}
+    to {background-position: -600px,0;}
+}
+
+
+</style>
+</head>
+
+<body>
+<div id="anim">
+ <div id="plane">
+  <div id="move">
+  <div id="up"><img   src="plane.png" height="100px" width="100px"/></div>
+  </div>
+ </div>
+</div>
+
+<div>
+<a href="#up"><img src="up.png" width="100px"/></a>
+<a href="#down"><img src="down.png" width="100px"/></a>
+</div>
+
+
+</body>
+
+</html>
